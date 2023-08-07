@@ -3,3 +3,6 @@
 
 [Script]
 TUN only = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/moduleState.js,argument=title=TUN only&module=TUN Only&color1=#1E90FF&color2=#FF0000&icon=power
+
+[Panel]
+TUN only = script-name=TUN only,update-interval=43200
