@@ -2,7 +2,7 @@
 #!desc=刷新DNS
 
 [Script]
-刷新DNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/dns/Flush-DNS.js,argument=icon=arrow.clockwise&color=#1E90FF,script-update-interval=-1
+刷新DNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/flushDNS.js,argument=icon=arrow.clockwise&color=#1E90FF,script-update-interval=-1
 
 [Panel]
 刷新DNS = script-name=刷新DNS,update-interval=-1
