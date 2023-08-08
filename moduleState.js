@@ -13,13 +13,13 @@
         if (arg.color2) color2 = arg.color2;
     }
     if ($trigger == "button") {
-        moduleState = (await httpAPI("/v1/modules")).enabled.includes(module);
+        moduleState = (await httpAPI("/v1/modules")).开启.includes(module);
         let moduleBody = {};
         moduleBody[module] = !moduleState;
         await httpAPI("/v1/modules", "POST", moduleBody);
         await sleep(100);
     }
-    moduleState = (await httpAPI("/v1/modules")).enabled.includes(module);
+    moduleState = (await httpAPI("/v1/modules")).开启.includes(module);
     if (moduleState) panel["icon-color"] = color2 ? color2 : "#ff0000";
     else color1 ? (panel["icon-color"] = color1) : "";
     panel.content = `状态: ${moduleState ? "开启" : "关闭"}`;
