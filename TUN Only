@@ -1,0 +1,9 @@
+#!name=TUN Only
+#!desc=强制80端口的域名请求使用HTTP引擎处理并打开解密TCP流量
+
+[General]
+compatibility-mode = 3
+force-http-engine-hosts = %APPEND% -<ip-address>, *
+
+[MITM]
+tcp-connection = true
