@@ -22,7 +22,7 @@
     moduleState = (await httpAPI("/v1/modules")).enabled.includes(module);
     if (moduleState) panel["icon-color"] = color2 ? color2 : "#ff0000";
     else color1 ? (panel["icon-color"] = color1) : "";
-    panel.content = `State: ${moduleState ? "enabled" : "disabled"}`;
+    panel.content = `状态: ${moduleState ? "开启" : "关闭"}`;
     $done(panel);
 })();
 
