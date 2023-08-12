@@ -1,0 +1,9 @@
+#!name=Vista看天下
+#!desc=Vista看天下会员解锁
+
+[Script]
+Vista看天下=type=http-response,pattern=^https?:\/\/open3\.vistastory\.com\/v\d\/api\/(article\/article_detail|vip\/get_vip|my\/home\/get_home_center),require-body=1,script-path=https://github.com/kikoxvx/Surge/raw/Script/Vista.js
+
+[MITM]
+hostname = %APPEND% open3.vistastory.com
+
