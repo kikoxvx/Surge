@@ -1,0 +1,13 @@
+#!name=MIX解锁
+#!desc=MIX会员解锁
+
+[Script]
+mix相机=type=http-response,pattern=https?:\/\/cdn-bm\.camera360\.com\/api\/mix\/recovery,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/MIX.js
+
+[MITM]
+hostname= %APPEND% cdn-bm.camera360.com
+
+
+
+
+
