@@ -1,0 +1,8 @@
+#!name=Keep会员解锁
+#!desc=Keep会员解锁
+
+[Script]
+keep=type=http-response,pattern=^https:\/\/api\.gotokeep\.com,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Keep.js
+
+[MITM]
+hostname = %APPEND% api.gotokeep.com
