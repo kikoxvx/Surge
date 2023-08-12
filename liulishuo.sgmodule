@@ -1,0 +1,9 @@
+#!name=流利说·阅读解锁
+#!desc=流利说·阅读解锁
+
+[Script]
+流利说·阅读=type=http-response,pattern=^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$,requires-body=true,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/liulishuo.js
+
+[MITM]
+hostname= %APPEND% vira.llsapp.com
+
