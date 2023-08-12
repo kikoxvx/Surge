@@ -1,0 +1,8 @@
+#!name=爱企查解锁
+#!desc=爱企查会员解锁
+
+[Script]
+爱企查vip=type=http-response,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/aiqicha.js
+
+[MITM]
+hostname = %APPEND% aiqicha.baidu.com
