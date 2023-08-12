@@ -1,0 +1,9 @@
+#!name=Panda widget解锁
+#!desc=Panda widget会员解锁
+
+[Script]
+Panda widget=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/PandaWidget.js
+
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
