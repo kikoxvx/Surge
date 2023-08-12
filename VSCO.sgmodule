@@ -1,9 +1,0 @@
-#!name=VSCO解锁
-#!desc=vsco解锁
-
-[Script]
-VSCO=type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/VSCO.js
-VSCO1=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/VSCO.js
-
-[MITM]
-hostname= %APPEND% api.revenuecat.com
