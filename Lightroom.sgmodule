@@ -1,0 +1,8 @@
+#!name=LightRoom解锁
+#!desc=LightRoom会员解锁
+
+[MITM]
+hostname = %APPEND% photos.adobe.io
+
+[Script]
+LightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Lightroom.js
