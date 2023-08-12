@@ -1,0 +1,39 @@
+#!name=解锁合集
+#!desc=会员解锁合集
+
+[Script]
+# > 1blocker会员解锁
+1blocker= type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/v1\/subscribers,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/1blocker.js
+# > AccuWeather会员解锁
+AccuWeather=type=http-response,pattern=https://app-subscription-proxy.accuweather.com/subscriptions/v1/apple/validate,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/AccuWeather.js,requires-body=1,max-size=0
+# > AdGuard美区会员解锁
+AdGuard=type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/AdGuard.js
+# > Alarmy会员解锁
+Alarmy=type=http-response,pattern=https://ars.alar.my/api/v2/user/sync,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Alarmy.js,requires-body=1,max-size=0
+# > B612会员解锁
+B612咔叽=type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/B612.js
+# > Keep会员解锁
+keep=type=http-response,pattern=^https:\/\/api\.gotokeep\.com,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Keep.js
+# > LightRoom会员解锁
+LightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Lightroom.js
+# > Photoshop会员解锁
+PhotoshopExpress=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/photoshop.js
+# > Panda widget会员解锁
+Panda widget=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/PandaWidget.js
+# > Pandora会员解锁
+Pandora订阅管理=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Pandora.js
+# > MIX解锁
+mix相机=type=http-response,pattern=https?:\/\/cdn-bm\.camera360\.com\/api\/mix\/recovery,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/MIX.js
+# > Xmind会员解锁
+Xmind思维导图=type=http-response,pattern=https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Xmind.js,requires-body=true, timeout=10, tag=Xmind思维导图
+# > 熊掌记会员解锁
+熊掌记=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/xiongzhangji.js
+# > 美图秀秀会员解锁
+美图秀秀=type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/mtxx.sj
+
+[rewrite_local]
+# > APTV解锁
+https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/kikoxvx/Surge/Script/APTV.js
+
+[MITM]
+hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn, www.xmind.net,www.xmind.app,cdn-bm.camera360.com
