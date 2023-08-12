@@ -1,0 +1,8 @@
+#!name=B612会员解锁
+#!desc=B612会员解锁
+
+[Script]
+B612咔叽=type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/B612.js
+
+[MITM]
+hostname = %APPEND% user-kaji-api.b612kaji.com
