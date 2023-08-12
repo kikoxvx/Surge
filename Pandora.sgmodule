@@ -1,0 +1,9 @@
+#!name=Pandora解锁
+
+#!desc=Pandora会员解锁
+
+[Script]
+Pandora订阅管理=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Pandora.js
+
+[MITM]
+hostname= %APPEND% buy.itunes.apple.com
