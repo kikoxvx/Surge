@@ -1,0 +1,8 @@
+#!name=考途解锁
+#!desc=考途会员解锁
+
+[Script]
+kaotu = type=http-response,pattern=^https:\/\/api-service\.tutusouti\.com\/appServiceApi\/(vip\/newUserPayVipData|video\/videoDetail),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/kaotu.js
+
+[MITM]
+hostname= %APPEND% api-service.tutusouti.com
