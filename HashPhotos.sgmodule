@@ -1,0 +1,8 @@
+#!name=HashPhotos解锁
+#!desc=HashPhotos会员解锁
+
+[Script]
+HashPhotos = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/HashPhotos.js
+
+[MITM]
+hostname= %APPEND% buy.itunes.apple.com
