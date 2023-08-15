@@ -1,0 +1,8 @@
+#!name=Flightradar24解锁
+#!desc=Flightradar24会员解锁
+
+[Script]
+Flightradar24 = type=http-response,pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Flightradar24.js
+
+[MITM]
+hostname= %APPEND% mobile.flightradar24.com
