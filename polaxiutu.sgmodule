@@ -1,0 +1,9 @@
+#!name=泼辣修图解锁
+#!desc=泼辣修图会员解锁
+
+[Script]
+polaqx = type=http-response,pattern=^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/polaxiutu.js
+polaqx = type=http-request,pattern=# ^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/polaxiutu.js
+
+[MITM]
+hostname= %APPEND% api.polaxiong.com
