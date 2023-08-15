@@ -1,0 +1,9 @@
+#!name=GoodNotes6
+#!desc=GoodNotes6破解
+
+[Script]
+goodnotes6 = type=http-response,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/GoodNotes6.js
+goodnotes = type=http-request,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/GoodNotes6.js
+
+[MITM]
+hostname= %APPEND% isi.csan.goodnotes.com
