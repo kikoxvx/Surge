@@ -1,0 +1,8 @@
+#!name=时光序解锁
+#!desc=时光序会员解锁
+
+[Script]
+shiguangxu = type=http-response,pattern=^https:\/\/api\.weilaizhushou\.com\/base\/user\/vip\/getUserVip,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/shiguangxu.js
+
+[MITM]
+hostname= %APPEND% api.weilaizhushou.com
