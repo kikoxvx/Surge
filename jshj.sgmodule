@@ -14,10 +14,21 @@ Alarmy=type=http-response,pattern=https://ars.alar.my/api/v2/user/sync,script-pa
 B612咔叽=type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/B612.js
 # > EMBY会员解锁
 embyPremiere.js = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/EMBY.js
+# > Flightradar24会员解锁
+Flightradar24 = type=http-response,pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Flightradar24.js
+# > GoodNotes6会员解锁
+goodnotes6 = type=http-response,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/GoodNotes6.js
+goodnotes = type=http-request,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/GoodNotes6.js
+# > HashPhotos会员解锁
+HashPhotos = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/HashPhotos.js
 # > Keep会员解锁
 keep=type=http-response,pattern=^https:\/\/api\.gotokeep\.com,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Keep.js
 # > LightRoom会员解锁
 LightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Lightroom.js
+# > Nicegram会员解锁
+Nicegram会员 = type=http-request,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Nicegram.js
+# > Notability会员解锁
+notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Notability.js
 # > Photoshop会员解锁
 PhotoshopExpress=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/photoshop.js
 # > Panda widget会员解锁
@@ -26,12 +37,19 @@ Panda widget=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/veri
 Pandora订阅管理=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Pandora.js
 # > Pillow解锁会员
 Pillow=type=http-response,pattern=https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts),requires-body=1 ,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Pillow.js
+# > Picsart会员解锁
+picsart = type=http-response,pattern=^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Picsart.js
 # > MIX解锁
 mix相机=type=http-response,pattern=https?:\/\/cdn-bm\.camera360\.com\/api\/mix\/recovery,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/MIX.js
 # > Xmind会员解锁
 Xmind思维导图=type=http-response,pattern=https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Xmind.js,requires-body=true, timeout=10, tag=Xmind思维导图
+# > WaterMinder会员解锁
+WaterMinder = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/WaterMinder.js
 # > 爱企查会员解锁
 爱企查vip=type=http-response,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/aiqicha.js
+# > 车票票会员解锁
+chepiaopiao = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/chepiaopiao.js
+chepiaopiao = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/chepiaopiao.js
 # > 扫描全能王会员解锁
 扫描全能王=type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1, script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/CamScanner.js
 # > 熊掌记会员解锁
@@ -40,12 +58,21 @@ Xmind思维导图=type=http-response,pattern=https?:\/\/www\.xmind\.(cn|net|app)
 一甜相机=type=http-response,pattern=^https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v2\/vip\/vipUserInfo,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/yitian.js,requires-body=1
 # > 美图秀秀会员解锁
 美图秀秀=type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/mtxx.sj
+# > 泼辣修图会员解锁
+polaqx = type=http-response,pattern=^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/polaxiutu.js
+polaqx = type=http-request,pattern=# ^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/polaxiutu.js
 # > 流利说·阅读解锁
 流利说·阅读=type=http-response,pattern=^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$,requires-body=true,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/liulishuo.js
+# > 墨迹天气会员解锁
+墨迹天气= type=http-response,pattern=^https?:\/\/.*\.api\.moji\.com\/(sns\/json\/profile\/get_info_.+|json\/member_new\/homepage_info.+|user\/personal\/json\/profile_.+|flycard\/novice|shortvideo\/.+),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/mojitianqi.js
+# > 时光序会员解锁
+shiguangxu = type=http-response,pattern=^https:\/\/api\.weilaizhushou\.com\/base\/user\/vip\/getUserVip,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/shiguangxu.js
+# > 考途会员解锁
+kaotu = type=http-response,pattern=^https:\/\/api-service\.tutusouti\.com\/appServiceApi\/(vip\/newUserPayVipData|video\/videoDetail),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/kaotu.js
 
 [rewrite_local]
 # > APTV解锁
 https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/kikoxvx/Surge/Script/APTV.js
 
 [MITM]
-hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn, www.xmind.net,www.xmind.app,cdn-bm.camera360.com,mb3admin.com,api.revenuecat.com,ap*.intsig.net,m2u-api.getkwai.com,aiqicha.baidu.com,vira.llsapp.com
+hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn, www.xmind.net,www.xmind.app,cdn-bm.camera360.com,mb3admin.com,api.revenuecat.com,ap*.intsig.net,m2u-api.getkwai.com,aiqicha.baidu.com,vira.llsapp.com,mobile.flightradar24.com,isi.csan.goodnotes.com,restore-access.indream.app,notability.com,api.meiease.cn,&nbsp;*.api.moji.com,api.weilaizhushou.com,api.polaxiong.com,api-service.tutusouti.com
