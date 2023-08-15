@@ -1,0 +1,8 @@
+#!name=Notability解锁
+#!desc=Notability会员解锁
+
+[Script]
+notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Notability.js
+
+[MITM]
+hostname= %APPEND% notability.com
