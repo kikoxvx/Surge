@@ -1,0 +1,8 @@
+#!name=解锁合集
+#!desc=包含APP： Filmicpro，Focos，Focos live，Splice，30 Day Fitness，Sleep，Remini，Yoga Wave，Firstlight，Doubletake
+
+[Script]
+bending = type=http-response,pattern=^https?:\/\/.*\.oracle\.bendingspoonsapps\.com\/v\d\/(users\/.+|purchases\/verify),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/jiesuoheji.js
+
+[MITM]
+hostname= %APPEND% *.oracle.bendingspoonsapps.com
