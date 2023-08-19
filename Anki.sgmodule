@@ -1,0 +1,8 @@
+#!name=Anki记忆卡解锁
+#!desc=Anki记忆卡会员解锁
+
+[Script]
+Anki = type=http-response,pattern=^https:\/\/api\.ankichinas\.com\/api\/v1\/users\/vipInfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Anki.js
+
+[MITM]
+hostname= %APPEND% api.ankichinas.com
