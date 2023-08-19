@@ -41,6 +41,8 @@ Pandora订阅管理=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.co
 picsart = type=http-response,pattern=^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Picsart.js
 # > MIX解锁
 mix相机=type=http-response,pattern=https?:\/\/cdn-bm\.camera360\.com\/api\/mix\/recovery,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/MIX.js
+# > Storm解锁本地会员
+storm = type=http-response,pattern=^https?:\/\/api\.x-storm\.com\/app\/user-profile\/$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Storm.js
 # > Xmind会员解锁
 Xmind思维导图=type=http-response,pattern=https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Xmind.js,requires-body=true, timeout=10, tag=Xmind思维导图
 # > WaterMinder会员解锁
@@ -76,4 +78,4 @@ bending = type=http-response,pattern=^https?:\/\/.*\.oracle\.bendingspoonsapps\.
 https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/kikoxvx/Surge/Script/APTV.js
 
 [MITM]
-hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn,www.xmind.net,www.xmind.app,cdn-bm.camera360.com,mb3admin.com,ap*.intsig.net,m2u-api.getkwai.com,aiqicha.baidu.com,vira.llsapp.com,mobile.flightradar24.com,isi.csan.goodnotes.com,restore-access.indream.app,notability.com,api.meiease.cn,*.api.moji.com,api.weilaizhushou.com,api.polaxiong.com,api-service.tutusouti.com,api.ankichinas.com,*.aliyundrive.com,*.alipan.com,*oracle.bendingspoonsapps.com
+hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn,www.xmind.net,www.xmind.app,cdn-bm.camera360.com,mb3admin.com,ap*.intsig.net,m2u-api.getkwai.com,aiqicha.baidu.com,vira.llsapp.com,mobile.flightradar24.com,isi.csan.goodnotes.com,restore-access.indream.app,notability.com,api.meiease.cn,*.api.moji.com,api.weilaizhushou.com,api.polaxiong.com,api-service.tutusouti.com,api.ankichinas.com,*.aliyundrive.com,*.alipan.com,*oracle.bendingspoonsapps.com,*.x-storm.com
