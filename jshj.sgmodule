@@ -27,8 +27,6 @@ HashPhotos = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/ver
 keep=type=http-response,pattern=^https:\/\/api\.gotokeep\.com,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Keep.js
 # > LightRoom会员解锁
 LightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Lightroom.js
-# > Light会员解锁
-Light = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Light.js
 # > Nicegram会员解锁
 Nicegram会员 = type=http-request,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Nicegram.js
 # > Notability会员解锁
@@ -39,8 +37,6 @@ PhotoshopExpress=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.i
 Panda widget=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/PandaWidget.js
 # > Pandora会员解锁
 Pandora订阅管理=type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Pandora.js
-# > Pillow解锁会员
-Pillow=type=http-response,pattern=https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts),requires-body=1 ,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Pillow.js
 # > Picsart会员解锁
 picsart = type=http-response,pattern=^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/Picsart.js
 # > MIX解锁
@@ -53,9 +49,6 @@ WaterMinder = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/ve
 alidrive = type=http-response,pattern=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/aliwangpan.js
 # > 爱企查会员解锁
 爱企查vip=type=http-response,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax,requires-body=1,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/aiqicha.js
-# > 车票票会员解锁
-chepiaopiao = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/chepiaopiao.js
-chepiaopiao = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/chepiaopiao.js
 # > 扫描全能王会员解锁
 扫描全能王=type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1, script-path=https://raw.githubusercontent.com/kikoxvx/Surge/Script/CamScanner.js
 # > 熊掌记会员解锁
@@ -83,4 +76,4 @@ bending = type=http-response,pattern=^https?:\/\/.*\.oracle\.bendingspoonsapps\.
 https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/kikoxvx/Surge/Script/APTV.js
 
 [MITM]
-hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn,www.xmind.net,www.xmind.app,cdn-bm.camera360.com,mb3admin.com,api.revenuecat.com,ap*.intsig.net,m2u-api.getkwai.com,aiqicha.baidu.com,vira.llsapp.com,mobile.flightradar24.com,isi.csan.goodnotes.com,restore-access.indream.app,notability.com,api.meiease.cn,*.api.moji.com,api.weilaizhushou.com,api.polaxiong.com,api-service.tutusouti.com,api.ankichinas.com,*.aliyundrive.com,*.alipan.com,*.oracle.bendingspoonsapps.com,api.revenuecat.com
+hostname= %APPEND% api.revenuecat.com,app-subscription-proxy.accuweather.com,mobile-api.adguard.org,ars.alar.my,user-kaji-api.b612kaji.com,api.gotokeep.com,photos.adobe.io,lcs-mobile-cops.adobe.io,buy.itunes.apple.com,h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com,www.xmind.cn,www.xmind.net,www.xmind.app,cdn-bm.camera360.com,mb3admin.com,ap*.intsig.net,m2u-api.getkwai.com,aiqicha.baidu.com,vira.llsapp.com,mobile.flightradar24.com,isi.csan.goodnotes.com,restore-access.indream.app,notability.com,api.meiease.cn,*.api.moji.com,api.weilaizhushou.com,api.polaxiong.com,api-service.tutusouti.com,api.ankichinas.com,*.aliyundrive.com,*.alipan.com,*oracle.bendingspoonsapps.com
