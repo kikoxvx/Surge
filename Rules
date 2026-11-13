@@ -1,0 +1,16 @@
+# > Finance
+DOMAIN-KEYWORD,uphold.com,Europe
+DOMAIN-KEYWORD,zilch,Europe
+DOMAIN-KEYWORD,taptapsend,Europe
+DOMAIN-KEYWORD,myfin,DIRECT
+DOMAIN-KEYWORD,yonder,Europe
+DOMAIN-KEYWORD,kraken,Europe
+DOMAIN-KEYWORD,skrill,Europe
+DOMAIN-KEYWORD,zopa,Europe
+DOMAIN-KEYWORD,lloyds,Europe,extended-matching
+DOMAIN-KEYWORD,ibkr,"Hong Kong"
+DOMAIN-KEYWORD,schwab,DIRECT
+DOMAIN-KEYWORD,trading212,Europe
+DOMAIN-KEYWORD,experian,Europe,extended-matching // experian
+DOMAIN-KEYWORD,equifax,Europe,extended-matching // equifax
+DOMAIN-KEYWORD,creditkarma,Europe,extended-matching // creditkarma
